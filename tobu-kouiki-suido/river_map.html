@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><title>東部広域水道 河川模式図</title>
+<style>
+  html,body{margin:0;background:#fcfcfb}
+  svg{display:block;font-family:"IPAPGothic","IPAGothic",sans-serif}
+  .river{fill:none;stroke:#8cbbe8;stroke-linecap:round;stroke-linejoin:round}
+  .rname{font-size:20px;fill:#2a6fb8;font-weight:bold}
+  .t{fill:#0b0b0b}.s{fill:#52514e}
+  .box{fill:#ffffff;stroke:#c9c8c2;stroke-width:1.2}
+  .pipe{fill:none;stroke:#2a78d6;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+</style></head><body>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200">
+  <rect width="1600" height="1200" fill="#fcfcfb"/>
+  <defs>
+    <g id="dam"><rect x="-16" y="-9" width="32" height="18" rx="2" fill="#3d3d3a"/><rect x="-16" y="-9" width="32" height="5" fill="#6b6a64"/></g>
+    <marker id="arrO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#eb6834"/></marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0L10,5L0,10z" fill="#2a78d6"/></marker>
+  </defs>
+
+  <!-- タイトル -->
+  <text x="40" y="58" font-size="32" font-weight="bold" class="t">東部広域水道 ダムの許可水量と東濃5市の使用水量（河川模式図）</text>
+  <text x="40" y="92" font-size="17" class="s">位置関係は模式的に表したもの（縮尺・形状は実際と異なります）。1 m³/s ＝ 86,400 m³/日</text>
+
+  <!-- ===== 河川 ===== -->
+  <!-- 揖斐川 -->
+  <path class="river" stroke-width="10" d="M175,130 C160,300 150,500 170,700 C185,850 190,950 200,1000"/>
+  <text x="120" y="820" class="rname" transform="rotate(-88 120 820)">揖斐川</text>
+  <!-- 木曽川 本川 -->
+  <path class="river" stroke-width="16" d="M1545,130 C1500,230 1430,300 1360,360 C1280,430 1200,460 1080,480 C940,500 800,505 660,520 C520,535 400,580 330,660 C280,730 260,860 250,1000"/>
+  <text x="1440" y="290" class="rname" transform="rotate(-50 1440 290)">木曽川</text>
+  <text x="780" y="490" class="rname">木曽川</text>
+  <!-- 王滝川（牧尾ダム） -->
+  <path class="river" stroke-width="9" d="M1570,300 C1500,320 1420,335 1360,360"/>
+  <text x="1500" y="355" font-size="16" fill="#2a6fb8">王滝川</text>
+  <!-- 阿木川（阿木ダム） -->
+  <path class="river" stroke-width="9" d="M1110,690 C1100,610 1080,540 1080,480"/>
+  <text x="1118" y="700" font-size="16" fill="#2a6fb8">阿木川</text>
+  <!-- 飛騨川 -->
+  <path class="river" stroke-width="12" d="M700,130 C690,250 680,380 660,520"/>
+  <text x="712" y="200" class="rname">飛騨川</text>
+  <!-- 馬瀬川（岩屋ダム） -->
+  <path class="river" stroke-width="8" d="M540,150 C580,200 640,250 688,300"/>
+  <text x="478" y="146" font-size="16" fill="#2a6fb8">馬瀬川</text>
+  <text x="222" y="1030" font-size="16" class="s">伊勢湾へ</text>
+
+  <!-- ===== ダム（木曽川水系：東濃地域） ===== -->
+  <use href="#dam" x="1528" y="170"/>
+  <g transform="translate(1180,130)">
+    <rect class="box" width="310" height="62" rx="6"/>
+    <text x="14" y="26" font-size="19" font-weight="bold" class="t">味噌川ダム　0.30 m³/s</text>
+    <text x="14" y="50" font-size="16" class="s">25,920 m³/日</text>
+  </g>
+  <line x1="1490" y1="165" x2="1510" y2="168" stroke="#9a9994"/>
+
+  <use href="#dam" x="1498" y="318"/>
+  <g transform="translate(1260,380)">
+    <rect class="box" width="310" height="62" rx="6"/>
+    <text x="14" y="26" font-size="19" font-weight="bold" class="t">牧尾ダム　1.30 m³/s</text>
+    <text x="14" y="50" font-size="16" class="s">112,320 m³/日</text>
+  </g>
+  <line x1="1480" y1="380" x2="1495" y2="330" stroke="#9a9994"/>
+
+  <use href="#dam" x="1098" y="600"/>
+  <g transform="translate(1140,560)">
+    <rect class="box" width="290" height="62" rx="6"/>
+    <text x="14" y="26" font-size="19" font-weight="bold" class="t">阿木ダム　0.80 m³/s</text>
+    <text x="14" y="50" font-size="16" class="s">69,120 m³/日</text>
+  </g>
+
+  <!-- 東濃 取水 まとめ -->
+  <g transform="translate(830,300)">
+    <rect width="340" height="118" rx="8" fill="#eaf2fc" stroke="#2a78d6" stroke-width="1.5"/>
+    <text x="16" y="32" font-size="19" font-weight="bold" class="t">東濃地域（木曽川水系）許可取水量</text>
+    <text x="16" y="70" font-size="30" font-weight="bold" fill="#1d5fae">2.40 m³/s</text>
+    <text x="16" y="102" font-size="18" class="t">＝ 207,360 m³/日</text>
+  </g>
+
+  <!-- ===== 飛騨川水系（可茂地域） ===== -->
+  <use href="#dam" x="612" y="228"/>
+  <g transform="translate(300,200)">
+    <rect class="box" width="280" height="62" rx="6"/>
+    <text x="14" y="26" font-size="19" font-weight="bold" class="t">岩屋ダム　1.35 m³/s</text>
+    <text x="14" y="50" font-size="16" class="s">116,640 m³/日</text>
+  </g>
+  <line x1="580" y1="231" x2="594" y2="229" stroke="#9a9994"/>
+  <g transform="translate(720,560)">
+    <rect width="300" height="84" rx="8" fill="#f1f0ec" stroke="#b5b4ae"/>
+    <text x="14" y="28" font-size="18" font-weight="bold" class="t">可茂地域（飛騨川水系）</text>
+    <text x="14" y="54" font-size="16" class="t">許可 1.35 m³/s ＝ 116,640 m³/日</text>
+    <text x="14" y="75" font-size="14" class="s">※給水量は資料に記載なし</text>
+  </g>
+
+  <!-- ===== 徳山ダム導水路 ===== -->
+  <use href="#dam" x="178" y="190"/>
+  <text x="200" y="175" font-size="19" font-weight="bold" class="t">徳山ダム</text>
+  <path d="M190,205 C300,300 420,420 600,528" fill="none" stroke="#eb6834" stroke-width="5" stroke-dasharray="14 9" marker-end="url(#arrO)"/>
+  <g transform="translate(40,300)">
+    <rect width="310" height="170" rx="8" fill="#fdefe8" stroke="#eb6834" stroke-width="1.5"/>
+    <text x="14" y="30" font-size="19" font-weight="bold" fill="#b8431a">徳山ダム導水路（導入後）</text>
+    <text x="14" y="58" font-size="16" class="t">利水容量 4.0 m³/s を按分（2.4：1.35）</text>
+    <text x="14" y="92" font-size="18" font-weight="bold" class="t">木曽川水系 2.56 m³/s</text>
+    <text x="30" y="116" font-size="16" class="t">＝ 221,184 m³/日（約22万）</text>
+    <text x="14" y="146" font-size="16" class="t">飛騨川水系 1.44 m³/s</text>
+    <text x="30" y="164" font-size="14" class="s">＝ 124,416 m³/日</text>
+  </g>
+
+  <!-- ===== 送水（取水点 → 5市） ===== -->
+  <circle cx="1040" cy="486" r="9" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
+  <text x="960" y="462" font-size="15" fill="#1d5fae">取水</text>
+  <path class="pipe" d="M1040,495 L1040,730 L420,730"/>
+  <path class="pipe" d="M1040,730 L1270,730"/>
+  <text x="440" y="720" font-size="15" fill="#1d5fae">送水（東部広域水道）</text>
+
+  <!-- 市（西→東）　バー：35,714 = 150px -->
+  <g font-size="16">
+    <!-- 多治見 -->
+    <g transform="translate(330,760)">
+      <path class="pipe" d="M90,-30 L90,0" marker-end="url(#arrB)"/>
+      <rect class="box" width="180" height="120" rx="8"/>
+      <text x="14" y="30" font-size="20" font-weight="bold" class="t">多治見市</text>
+      <text x="14" y="64" font-size="22" font-weight="bold" class="t">35,714<tspan font-size="16" font-weight="normal" fill="#52514e" dx="6">m³/日</tspan></text>
+      <rect x="14" y="84" width="150" height="16" rx="3" fill="#2a78d6"/>
+    </g>
+    <!-- 土岐 -->
+    <g transform="translate(540,760)">
+      <path class="pipe" d="M90,-30 L90,0" marker-end="url(#arrB)"/>
+      <rect class="box" width="180" height="120" rx="8"/>
+      <text x="14" y="30" font-size="20" font-weight="bold" class="t">土岐市</text>
+      <text x="14" y="64" font-size="22" font-weight="bold" class="t">19,494<tspan font-size="16" font-weight="normal" fill="#52514e" dx="6">m³/日</tspan></text>
+      <rect x="14" y="84" width="81.9" height="16" rx="3" fill="#2a78d6"/>
+    </g>
+    <!-- 瑞浪 -->
+    <g transform="translate(750,760)">
+      <path class="pipe" d="M90,-30 L90,0" marker-end="url(#arrB)"/>
+      <rect class="box" width="180" height="120" rx="8"/>
+      <text x="14" y="30" font-size="20" font-weight="bold" class="t">瑞浪市</text>
+      <text x="14" y="64" font-size="22" font-weight="bold" class="t">12,624<tspan font-size="16" font-weight="normal" fill="#52514e" dx="6">m³/日</tspan></text>
+      <rect x="14" y="84" width="53" height="16" rx="3" fill="#2a78d6"/>
+    </g>
+    <!-- 恵那 -->
+    <g transform="translate(960,760)">
+      <path class="pipe" d="M90,-30 L90,0" marker-end="url(#arrB)"/>
+      <rect class="box" width="180" height="120" rx="8"/>
+      <text x="14" y="30" font-size="20" font-weight="bold" class="t">恵那市</text>
+      <text x="14" y="64" font-size="22" font-weight="bold" class="t">6,145<tspan font-size="16" font-weight="normal" fill="#52514e" dx="6">m³/日</tspan></text>
+      <rect x="14" y="84" width="25.8" height="16" rx="3" fill="#2a78d6"/>
+    </g>
+    <!-- 中津川 -->
+    <g transform="translate(1170,760)">
+      <path class="pipe" d="M90,-30 L90,0" marker-end="url(#arrB)"/>
+      <rect class="box" width="180" height="120" rx="8"/>
+      <text x="14" y="30" font-size="20" font-weight="bold" class="t">中津川市</text>
+      <text x="14" y="64" font-size="22" font-weight="bold" class="t">21,646<tspan font-size="16" font-weight="normal" fill="#52514e" dx="6">m³/日</tspan></text>
+      <rect x="14" y="84" width="90.9" height="16" rx="3" fill="#2a78d6"/>
+    </g>
+  </g>
+  <text x="1370" y="800" font-size="15" class="s">青棒＝使用水量</text>
+  <text x="1370" y="822" font-size="15" class="s">（東濃地域の現在の</text>
+  <text x="1370" y="844" font-size="15" class="s">　給水量）</text>
+
+  <!-- ===== 集計 ===== -->
+  <g transform="translate(330,915)">
+    <rect width="1230" height="200" rx="10" fill="#ffffff" stroke="#c9c8c2"/>
+    <text x="24" y="38" font-size="20" font-weight="bold" class="t">東濃地域の水収支（m³/日）</text>
+    <!-- 導入前 -->
+    <text x="24" y="86" font-size="17" font-weight="bold" class="t">導水路 導入前</text>
+    <rect x="160" y="68" width="136.3" height="26" fill="#2a78d6"/>
+    <rect x="298" y="68" width="157.3" height="26" fill="#a8c8ee"/>
+    <text x="470" y="88" font-size="16" class="t">許可 207,360 ＝ 使用 95,623 ＋ 未利用 111,737</text>
+    <!-- 導入後 -->
+    <text x="24" y="140" font-size="17" font-weight="bold" class="t">導水路 導入後</text>
+    <rect x="160" y="122" width="136.3" height="26" fill="#2a78d6"/>
+    <rect x="298" y="122" width="157.3" height="26" fill="#a8c8ee"/>
+    <rect x="457" y="122" width="313.2" height="26" fill="#eb6834"/>
+    <text x="785" y="142" font-size="16" class="t">許可 428,544 ＝ 使用 95,623 ＋ 未利用 <tspan font-weight="bold">332,921（約33万）</tspan></text>
+    <!-- 凡例 -->
+    <rect x="160" y="170" width="16" height="16" fill="#2a78d6"/><text x="182" y="184" font-size="15" class="s">使用水量（給水量）</text>
+    <rect x="340" y="170" width="16" height="16" fill="#a8c8ee"/><text x="362" y="184" font-size="15" class="s">未利用（既存許可）</text>
+    <rect x="520" y="170" width="16" height="16" fill="#eb6834"/><text x="542" y="184" font-size="15" class="s">徳山ダム導水路 木曽川分（未利用）</text>
+    <text x="820" y="184" font-size="14" class="s">※導入後の使用水量は現状と同じと仮定</text>
+  </g>
+
+  <text x="40" y="1170" font-size="14" class="s">出典：水道用水供給事業年報（令和6年度事業報告）岐阜県都市建築部水道企業課</text>
+</svg>
+</body></html>
