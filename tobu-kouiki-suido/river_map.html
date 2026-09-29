@@ -28,7 +28,7 @@
   <!-- 木曽川 本川 -->
   <path class="river" stroke-width="16" d="M1545,130 C1500,230 1430,300 1360,360 C1280,430 1200,460 1080,480 C940,500 800,505 660,520 C520,535 400,580 330,660 C280,730 260,860 250,1000"/>
   <text x="1440" y="290" class="rname" transform="rotate(-50 1440 290)">木曽川</text>
-  <text x="780" y="490" class="rname">木曽川</text>
+  <text x="1110" y="446" class="rname">木曽川</text>
   <!-- 王滝川（牧尾ダム） -->
   <path class="river" stroke-width="9" d="M1570,300 C1500,320 1420,335 1360,360"/>
   <text x="1500" y="355" font-size="16" fill="#2a6fb8">王滝川</text>
@@ -37,7 +37,7 @@
   <text x="1118" y="700" font-size="16" fill="#2a6fb8">阿木川</text>
   <!-- 飛騨川 -->
   <path class="river" stroke-width="12" d="M700,130 C690,250 680,380 660,520"/>
-  <text x="712" y="200" class="rname">飛騨川</text>
+  <text x="592" y="400" class="rname">飛騨川</text>
   <!-- 馬瀬川（岩屋ダム） -->
   <path class="river" stroke-width="8" d="M540,150 C580,200 640,250 688,300"/>
   <text x="478" y="146" font-size="16" fill="#2a6fb8">馬瀬川</text>
@@ -61,7 +61,8 @@
   <line x1="1480" y1="380" x2="1495" y2="330" stroke="#9a9994"/>
 
   <use href="#dam" x="1098" y="600"/>
-  <g transform="translate(1140,560)">
+  <line x1="1116" y1="600" x2="1300" y2="632" stroke="#9a9994"/>
+  <g transform="translate(1300,600)">
     <rect class="box" width="290" height="62" rx="6"/>
     <text x="14" y="26" font-size="19" font-weight="bold" class="t">阿木ダム　0.80 m³/s</text>
     <text x="14" y="50" font-size="16" class="s">69,120 m³/日</text>
@@ -83,7 +84,7 @@
     <text x="14" y="50" font-size="16" class="s">116,640 m³/日</text>
   </g>
   <line x1="580" y1="231" x2="594" y2="229" stroke="#9a9994"/>
-  <g transform="translate(720,560)">
+  <g transform="translate(745,150)">
     <rect width="300" height="84" rx="8" fill="#f1f0ec" stroke="#b5b4ae"/>
     <text x="14" y="28" font-size="18" font-weight="bold" class="t">可茂地域（飛騨川水系）</text>
     <text x="14" y="54" font-size="16" class="t">許可 1.35 m³/s ＝ 116,640 m³/日</text>
@@ -104,18 +105,22 @@
     <text x="30" y="164" font-size="14" class="s">＝ 124,416 m³/日</text>
   </g>
 
-  <!-- ===== 送水（取水点 → 5市） ===== -->
-  <circle cx="1040" cy="486" r="9" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
-  <text x="960" y="462" font-size="15" fill="#1d5fae">取水</text>
-  <path class="pipe" d="M1040,495 L1040,730 L420,730"/>
-  <path class="pipe" d="M1040,730 L1270,730"/>
-  <text x="440" y="720" font-size="15" fill="#1d5fae">送水（東部広域水道）</text>
+  <!-- ===== 各市の取水（木曽川から直接・模式） ===== -->
+  <path class="pipe" d="M700,516 L420,752" marker-end="url(#arrB)"/>
+  <path class="pipe" d="M820,506 L630,752" marker-end="url(#arrB)"/>
+  <path class="pipe" d="M935,497 L840,752" marker-end="url(#arrB)"/>
+  <path class="pipe" d="M1040,486 L1050,752" marker-end="url(#arrB)"/>
+  <path class="pipe" d="M1200,461 L1260,752" marker-end="url(#arrB)"/>
+  <circle cx="700" cy="516" r="8" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
+  <circle cx="820" cy="506" r="8" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
+  <circle cx="935" cy="497" r="8" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
+  <circle cx="1040" cy="486" r="8" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
+  <circle cx="1200" cy="461" r="8" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
 
   <!-- 市（西→東）　バー：35,714 = 150px -->
   <g font-size="16">
     <!-- 多治見 -->
     <g transform="translate(330,760)">
-      <path class="pipe" d="M90,-30 L90,0" marker-end="url(#arrB)"/>
       <rect class="box" width="180" height="120" rx="8"/>
       <text x="14" y="30" font-size="20" font-weight="bold" class="t">多治見市</text>
       <text x="14" y="64" font-size="22" font-weight="bold" class="t">35,714<tspan font-size="16" font-weight="normal" fill="#52514e" dx="6">m³/日</tspan></text>
@@ -123,7 +128,6 @@
     </g>
     <!-- 土岐 -->
     <g transform="translate(540,760)">
-      <path class="pipe" d="M90,-30 L90,0" marker-end="url(#arrB)"/>
       <rect class="box" width="180" height="120" rx="8"/>
       <text x="14" y="30" font-size="20" font-weight="bold" class="t">土岐市</text>
       <text x="14" y="64" font-size="22" font-weight="bold" class="t">19,494<tspan font-size="16" font-weight="normal" fill="#52514e" dx="6">m³/日</tspan></text>
@@ -131,7 +135,6 @@
     </g>
     <!-- 瑞浪 -->
     <g transform="translate(750,760)">
-      <path class="pipe" d="M90,-30 L90,0" marker-end="url(#arrB)"/>
       <rect class="box" width="180" height="120" rx="8"/>
       <text x="14" y="30" font-size="20" font-weight="bold" class="t">瑞浪市</text>
       <text x="14" y="64" font-size="22" font-weight="bold" class="t">12,624<tspan font-size="16" font-weight="normal" fill="#52514e" dx="6">m³/日</tspan></text>
@@ -139,7 +142,6 @@
     </g>
     <!-- 恵那 -->
     <g transform="translate(960,760)">
-      <path class="pipe" d="M90,-30 L90,0" marker-end="url(#arrB)"/>
       <rect class="box" width="180" height="120" rx="8"/>
       <text x="14" y="30" font-size="20" font-weight="bold" class="t">恵那市</text>
       <text x="14" y="64" font-size="22" font-weight="bold" class="t">6,145<tspan font-size="16" font-weight="normal" fill="#52514e" dx="6">m³/日</tspan></text>
@@ -147,16 +149,16 @@
     </g>
     <!-- 中津川 -->
     <g transform="translate(1170,760)">
-      <path class="pipe" d="M90,-30 L90,0" marker-end="url(#arrB)"/>
       <rect class="box" width="180" height="120" rx="8"/>
       <text x="14" y="30" font-size="20" font-weight="bold" class="t">中津川市</text>
       <text x="14" y="64" font-size="22" font-weight="bold" class="t">21,646<tspan font-size="16" font-weight="normal" fill="#52514e" dx="6">m³/日</tspan></text>
       <rect x="14" y="84" width="90.9" height="16" rx="3" fill="#2a78d6"/>
     </g>
   </g>
-  <text x="1370" y="800" font-size="15" class="s">青棒＝使用水量</text>
-  <text x="1370" y="822" font-size="15" class="s">（東濃地域の現在の</text>
-  <text x="1370" y="844" font-size="15" class="s">　給水量）</text>
+  <text x="1370" y="800" font-size="15" class="s">青線＝各市の取水</text>
+  <text x="1370" y="822" font-size="15" class="s">　（模式）</text>
+  <text x="1370" y="852" font-size="15" class="s">青棒＝使用水量</text>
+  <text x="1370" y="874" font-size="15" class="s">　（現在の給水量）</text>
 
   <!-- ===== 集計 ===== -->
   <g transform="translate(330,915)">
