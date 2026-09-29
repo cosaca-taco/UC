@@ -53,12 +53,13 @@
   <line x1="1490" y1="165" x2="1510" y2="168" stroke="#9a9994"/>
 
   <use href="#dam" x="1498" y="318"/>
-  <g transform="translate(1260,380)">
-    <rect class="box" width="310" height="62" rx="6"/>
-    <text x="14" y="26" font-size="19" font-weight="bold" class="t">牧尾ダム　1.30 m³/s</text>
-    <text x="14" y="50" font-size="16" class="s">112,320 m³/日</text>
+  <g transform="translate(1390,450)">
+    <rect class="box" width="200" height="86" rx="6"/>
+    <text x="14" y="26" font-size="19" font-weight="bold" class="t">牧尾ダム</text>
+    <text x="14" y="52" font-size="19" font-weight="bold" class="t">1.30 m³/s</text>
+    <text x="14" y="76" font-size="16" class="s">112,320 m³/日</text>
   </g>
-  <line x1="1480" y1="380" x2="1495" y2="330" stroke="#9a9994"/>
+  <line x1="1490" y1="450" x2="1497" y2="328" stroke="#9a9994"/>
 
   <use href="#dam" x="1098" y="600"/>
   <line x1="1116" y1="600" x2="1300" y2="632" stroke="#9a9994"/>
@@ -105,17 +106,17 @@
     <text x="30" y="164" font-size="14" class="s">＝ 124,416 m³/日</text>
   </g>
 
-  <!-- ===== 各市の取水（木曽川から直接・模式） ===== -->
-  <path class="pipe" d="M700,516 L420,752" marker-end="url(#arrB)"/>
-  <path class="pipe" d="M820,506 L630,752" marker-end="url(#arrB)"/>
-  <path class="pipe" d="M935,497 L840,752" marker-end="url(#arrB)"/>
-  <path class="pipe" d="M1040,486 L1050,752" marker-end="url(#arrB)"/>
-  <path class="pipe" d="M1200,461 L1260,752" marker-end="url(#arrB)"/>
-  <circle cx="700" cy="516" r="8" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
-  <circle cx="820" cy="506" r="8" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
-  <circle cx="935" cy="497" r="8" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
-  <circle cx="1040" cy="486" r="8" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
-  <circle cx="1200" cy="461" r="8" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
+  <!-- ===== 取水（1か所・中津川市より上流）→ 送水幹線 → 各市 ===== -->
+  <path class="pipe" d="M1287,413 L1287,715 L420,715"/>
+  <path class="pipe" d="M420,715 L420,752" marker-end="url(#arrB)"/>
+  <path class="pipe" d="M630,715 L630,752" marker-end="url(#arrB)"/>
+  <path class="pipe" d="M840,715 L840,752" marker-end="url(#arrB)"/>
+  <path class="pipe" d="M1050,715 L1050,752" marker-end="url(#arrB)"/>
+  <path class="pipe" d="M1260,715 L1260,752" marker-end="url(#arrB)"/>
+  <circle cx="1287" cy="413" r="11" fill="#2a78d6" stroke="#fff" stroke-width="3"/>
+  <text x="1276" y="520" font-size="17" font-weight="bold" fill="#1d5fae" text-anchor="end">取水点（1か所）</text>
+  <text x="1276" y="541" font-size="14" fill="#1d5fae" text-anchor="end">中津川市より上流</text>
+  <text x="440" y="704" font-size="15" fill="#1d5fae">送水（東部広域水道）</text>
 
   <!-- 市（西→東）　バー：35,714 = 150px -->
   <g font-size="16">
@@ -155,7 +156,7 @@
       <rect x="14" y="84" width="90.9" height="16" rx="3" fill="#2a78d6"/>
     </g>
   </g>
-  <text x="1370" y="800" font-size="15" class="s">青線＝各市の取水</text>
+  <text x="1370" y="800" font-size="15" class="s">青線＝取水・送水</text>
   <text x="1370" y="822" font-size="15" class="s">　（模式）</text>
   <text x="1370" y="852" font-size="15" class="s">青棒＝使用水量</text>
   <text x="1370" y="874" font-size="15" class="s">　（現在の給水量）</text>
