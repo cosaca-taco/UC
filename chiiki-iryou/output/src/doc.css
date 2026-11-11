@@ -1,0 +1,24 @@
+@page { size: A4; margin: 16mm 16mm 14mm; }
+:root { --navy:#1f3a5f; --blue:#2f6fae; --sky:#e8f1fa; --line:#c9d3de; --ink:#1d232b; --gray:#5b6470; --orange:#c8641e; }
+html, body { background:#fff; }
+body { font-family:"Yu Gothic","YuGothic","Hiragino Sans","Meiryo","IPAPGothic",sans-serif; color:var(--ink);
+  font-size:10pt; line-height:1.65; max-width:none; margin:0; padding:0; }
+header#title-block-header { border-bottom:1.2mm solid var(--navy); padding-bottom:3mm; margin-bottom:5mm; }
+header .subtitle { font-size:11pt; color:var(--gray); margin:0 0 1mm; }
+header h1.title { font-size:16pt; color:var(--navy); margin:0 0 2mm; line-height:1.35; }
+header .date { text-align:right; color:var(--gray); font-size:9.5pt; margin:0; }
+.draft { border:.3mm solid var(--orange); color:var(--orange); background:#fdf1e6; border-radius:1.5mm; padding:1.5mm 3mm; font-size:9pt; margin-bottom:4mm; }
+.draft p { margin:0; }
+h2 { font-size:12.5pt; color:#fff; background:var(--navy); padding:1.2mm 3mm; border-radius:1.2mm; margin:6mm 0 3mm; break-after:avoid; }
+h3 { font-size:11pt; color:var(--navy); border-left:1.4mm solid var(--blue); padding-left:2mm; margin:4mm 0 2mm; break-after:avoid; }
+p { margin:0 0 2mm; }
+ul, ol { margin:0 0 2mm; padding-left:6mm; } li { margin:.6mm 0; }
+table { width:100%; border-collapse:collapse; margin:1mm 0 3mm; font-size:9.4pt; break-inside:auto; }
+th, td { border:.25mm solid var(--line); padding:1.2mm 2mm; vertical-align:top; }
+th { background:var(--sky); color:var(--navy); text-align:left; }
+tr { break-inside:avoid; }
+td:first-child { white-space:nowrap; }
+figure { margin:2mm 0 4mm; break-inside:avoid; }
+figure img { width:100%; border:.3mm solid var(--line); }
+figcaption { display:none; }
+strong { color:#16304f; }
