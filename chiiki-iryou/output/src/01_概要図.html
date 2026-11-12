@@ -26,6 +26,7 @@
   section { border:.3mm solid var(--line); border-radius:1.6mm; padding:2mm 2.6mm; background:#fff; }
   h2 { font-size:9.6pt; color:#fff; background:var(--blue); margin:-2mm -2.6mm 1.8mm; padding:1mm 2.6mm; border-radius:1.4mm 1.4mm 0 0; }
   h2.g { background:var(--green); } h2.o { background:var(--orange); } h2.n { background:var(--navy); }
+  .col table th { white-space:nowrap; }
   h3 { font-size:8.8pt; color:var(--navy); margin:1.4mm 0 .6mm; border-left:1mm solid var(--blue); padding-left:1.4mm; }
   ul { padding-left:3.6mm; } li { margin:.3mm 0; }
   .col { display:flex; flex-direction:column; gap:3mm; min-height:0; }
@@ -90,10 +91,11 @@
         <tr><th>恵那市</th><td>申請・統括、住民周知</td></tr>
         <tr><th>恵那病院（協会）</th><td>総合診療医・看護師、車両運用</td></tr>
         <tr><th>藤田医科大学</th><td>専門医の遠隔支援、学術評価</td></tr>
+        <tr><th>検討プロジェクト</th><td>恵那病院×藤田の<b>現場同士</b>で運用・相談の流れを合意</td></tr>
         <tr><th>医師会・薬局</th><td>診療連携、服薬指導・配送</td></tr>
         <tr><th>地域・介護・交通</th><td>対象者把握、運行・配送</td></tr>
       </table>
-      <p class="note" style="margin-top:1mm">「（仮称）恵那市医療MaaS推進協議会」を令和8年度中に設置（岐阜県はオブザーバー）</p>
+      <p class="note" style="margin-top:1mm">「（仮称）恵那市医療MaaS推進協議会」の下に、協会と大学の現場同士の意思疎通を図る「検討プロジェクト」を令和8年度中に設置</p>
     </section>
   </div>
 
@@ -118,10 +120,10 @@
       <rect x="14" y="104" width="148" height="62" rx="6" fill="#fff" stroke="#2f6fae"/>
       <text x="22" y="119" font-size="9.5" font-weight="bold" fill="#2f6fae">南ルート</text>
       <text x="22" y="134" font-size="11" fill="#1d232b">山岡・串原</text>
-      <text x="22" y="152" font-size="8.5" fill="#5b6470">例：週3日運行（南2日・北1日）</text>
+      <text x="22" y="152" font-size="8.5" fill="#5b6470">各ルート1台・週2〜3日運行</text>
       <!-- 車両 -->
       <rect x="22" y="182" width="132" height="58" rx="8" fill="#2f6fae"/>
-      <text x="88" y="200" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">① 移動診療車</text>
+      <text x="88" y="200" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">① 移動診療車（2台）</text>
       <text x="88" y="215" text-anchor="middle" font-size="9" fill="#fff">看護師が同乗・バイタル測定</text>
       <text x="88" y="229" text-anchor="middle" font-size="9" fill="#fff">D to P with N</text>
       <circle cx="48" cy="244" r="6" fill="#1f3a5f"/><circle cx="128" cy="244" r="6" fill="#1f3a5f"/>
@@ -154,10 +156,12 @@
       <text x="176" y="172" font-size="9" fill="#2f6fae" font-weight="bold" transform="rotate(-62 176 172)">オンライン診療</text>
       <!-- 恵那↔藤田 -->
       <line x1="350" y1="119" x2="378" y2="119" stroke="#2e7d5b" stroke-width="2.4" marker-end="url(#ag)" marker-start="url(#ag)"/>
-      <rect x="300" y="18" width="164" height="30" rx="6" fill="#2e7d5b"/>
-      <text x="382" y="31" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">② 医師間の遠隔支援（D to D）</text>
-      <text x="382" y="43" text-anchor="middle" font-size="8.5" fill="#fff">必要時は三者同時（D to P with D）</text>
-      <line x1="364" y1="48" x2="364" y2="112" stroke="#2e7d5b" stroke-width="1" stroke-dasharray="3 2"/>
+      <rect x="296" y="4" width="172" height="46" rx="6" fill="#2e7d5b"/>
+      <text x="382" y="18" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">② 医師間の遠隔支援（D to D）</text>
+      <text x="382" y="30" text-anchor="middle" font-size="8.5" fill="#fff">必要時は三者同時（D to P with D）</text>
+      <rect x="304" y="35" width="156" height="12" rx="2" fill="#fff"/>
+      <text x="382" y="44.5" text-anchor="middle" font-size="8.3" font-weight="bold" fill="#2e7d5b">検討プロジェクトで現場同士が連携</text>
+      <line x1="364" y1="50" x2="364" y2="112" stroke="#2e7d5b" stroke-width="1" stroke-dasharray="3 2"/>
 
       <!-- 薬局 -->
       <rect x="208" y="212" width="140" height="74" rx="8" fill="#fdf1e6" stroke="#c8641e" stroke-width="1.5"/>
@@ -196,7 +200,7 @@
     <section>
       <h2>段階的な展開</h2>
       <div class="road">
-        <div class="now"><b>R8</b>準備・協定・推進協議会・申請</div>
+        <div class="now"><b>R8</b>検討PJ立上げ・協定・申請</div>
         <div><b>R9</b>医療MaaS実証開始（①②③）</div>
         <div><b>R10</b>専門連携の拡大、上矢作病院等を接続</div>
         <div><b>R11〜</b>診療報酬・市予算で自走、横展開</div>
@@ -206,12 +210,12 @@
       <h2 class="o">事業費（概算・3か年）</h2>
       <table>
         <tr><th style="white-space:nowrap">年度</th><th style="white-space:nowrap">事業費</th><th>主な内容</th></tr>
-        <tr><td>R9</td><td class="num">2,080万円</td><td>車両・機器、システム構築、運行</td></tr>
-        <tr><td>R10</td><td class="num">880万円</td><td>運行、連携拡大</td></tr>
-        <tr><td>R11</td><td class="num">730万円</td><td>運行、評価・横展開</td></tr>
-        <tr class="total"><td>計</td><td class="num">3,690万円</td><td>上限4,000万円以内</td></tr>
+        <tr><td>R9</td><td class="num">8,000万円</td><td>車両2台、連携基盤、運行</td></tr>
+        <tr><td>R10</td><td class="num">5,000万円</td><td>運行、連携拡大</td></tr>
+        <tr><td>R11</td><td class="num">4,500万円</td><td>運行、評価・横展開</td></tr>
+        <tr class="total"><td>計</td><td class="num">1億7,500万円</td><td>幅：1.5億〜2億円</td></tr>
       </table>
-      <p class="note" style="margin-top:.8mm">補助率1/2の場合、市負担は約1,850万円（R9 約1,040万円）。金額は見積前の概算。</p>
+      <p class="note" style="margin-top:.8mm">補助率1/2の場合、市負担は約8,750万円（R9 約4,000万円）。金額は見積前の概算。</p>
     </section>
     <section class="grow">
       <h2 class="g">成果指標（KPI）案</h2>
