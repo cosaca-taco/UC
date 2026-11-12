@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>恵那市 医療MaaS・専門医療連携 実証事業 概要図 Ver.2</title>
+<style>
+  @page { size: A4 landscape; margin: 0; }
+  :root {
+    --navy:#1e5a96; --blue:#3b8fe0; --sky:#eaf4fe; --green:#2fa36b; --mint:#e6f7ee;
+    --orange:#f0883e; --cream:#fff3e8; --teal:#1a9bb0; --aqua:#e3f6f9;
+    --gray:#66717e; --line:#dbe6f2; --ink:#2a3340; --bg:#f7fbff;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { background:var(--bg); }
+  body { width:297mm; height:210mm; padding:6.5mm 8mm 5.5mm; color:var(--ink);
+    background:linear-gradient(180deg,#eaf5ff 0%,#f7fbff 22%,#fbfdff 100%);
+    font-family:"Yu Gothic","YuGothic","Hiragino Sans","Meiryo","IPAPGothic",sans-serif;
+    font-size:8.2pt; line-height:1.34; display:flex; flex-direction:column; gap:2.4mm; }
+  header { display:flex; align-items:flex-end; justify-content:space-between; padding-bottom:1.8mm; position:relative; }
+  header::after { content:""; position:absolute; left:0; right:0; bottom:0; height:.9mm; border-radius:1mm;
+    background:linear-gradient(90deg,var(--blue),var(--teal) 50%,var(--green)); }
+  header h1 { font-size:17pt; color:var(--navy); letter-spacing:.02em; }
+  header h1 small { display:block; font-size:9.5pt; color:var(--teal); font-weight:bold; margin-bottom:.6mm; }
+  header .meta { text-align:right; font-size:8pt; color:var(--gray); }
+  header .meta b { display:inline-block; background:var(--orange); color:#fff; padding:.4mm 2.4mm; border-radius:3mm; margin-bottom:1mm; }
+  .vision { background:linear-gradient(90deg,#dff0ff,#e2f7ef); color:var(--navy); border:.3mm solid #bfe0f7; border-radius:5mm;
+    padding:1.8mm 4mm; font-size:10.5pt; font-weight:bold; text-align:center; }
+  .vision span { font-weight:normal; font-size:8.4pt; color:var(--teal); margin-left:3mm; }
+  main { flex:1; display:grid; grid-template-columns:68mm 1fr 68mm; gap:3mm; min-height:0; }
+  section { border:.3mm solid var(--line); border-radius:2.6mm; padding:2mm 2.6mm; background:#fff;
+    box-shadow:0 .6mm 1.6mm rgba(59,143,224,.10); }
+  h2 { font-size:9.6pt; color:var(--navy); background:var(--sky); margin:-2mm -2.6mm 1.8mm; padding:1mm 2.6mm 1mm 3.6mm;
+    border-radius:2.4mm 2.4mm 0 0; position:relative; }
+  h2::before { content:""; position:absolute; left:1.6mm; top:1.2mm; bottom:1.2mm; width:.9mm; border-radius:.5mm; background:var(--blue); }
+  h2.g { background:var(--mint); color:#1f7a50; } h2.g::before { background:var(--green); }
+  h2.o { background:var(--cream); color:#b85f1c; } h2.o::before { background:var(--orange); }
+  h2.n { background:var(--aqua); color:#137385; } h2.n::before { background:var(--teal); }
+  .col table th { white-space:nowrap; }
+  ul { padding-left:3.6mm; } li { margin:.3mm 0; } li::marker { color:var(--blue); }
+  .col { display:flex; flex-direction:column; gap:3mm; min-height:0; }
+  .col > section { flex:none; }
+  .col > section.grow { flex:1; }
+  table { width:100%; border-collapse:collapse; font-size:8pt; }
+  th, td { border:.25mm solid var(--line); padding:.6mm 1.2mm; vertical-align:top; }
+  th { background:#f3f9ff; color:var(--navy); text-align:left; }
+  td.num { text-align:right; white-space:nowrap; }
+  tr.total td { font-weight:bold; background:var(--cream); }
+  .tag { display:inline-block; font-size:7.4pt; padding:0 1.6mm; border-radius:2mm; color:#fff; background:var(--green); margin-right:1mm; }
+  .note { font-size:7.2pt; color:var(--gray); }
+  .diagram { padding:1.6mm 2mm 1.4mm; display:flex; flex-direction:column; justify-content:space-between; }
+  .diagram svg { width:100%; height:auto; display:block; margin:auto 0; }
+  .effects { display:grid; grid-template-columns:repeat(3,1fr); gap:2mm; margin-top:1.6mm; border-top:.3mm dashed var(--line); padding-top:1.4mm; font-size:8pt; }
+  .effects div { background:#f4faff; border-radius:2mm; padding:1mm 1.4mm; }
+  .themes { display:grid; grid-template-columns:repeat(3,1fr); gap:2mm; margin-top:1.4mm; }
+  .theme { border-radius:2mm; padding:1.4mm 1.8mm; font-size:7.9pt; }
+  .theme b { display:block; font-size:8.6pt; margin-bottom:.4mm; }
+  .t1 { background:var(--sky); border:.3mm solid #b9dbfa; } .t1 b { color:var(--navy); }
+  .t2 { background:var(--mint); border:.3mm solid #b5e6cb; } .t2 b { color:#1f7a50; }
+  .t3 { background:var(--cream); border:.3mm solid #fbd3b0; } .t3 b { color:#b85f1c; }
+  .road { display:grid; grid-template-columns:repeat(4,1fr); gap:1mm; }
+  .road div { background:var(--sky); border-radius:1.6mm; padding:1mm 1.2mm; font-size:7.6pt; position:relative; }
+  .road div b { display:block; color:var(--navy); font-size:8pt; }
+  .phase { display:grid; grid-template-columns:1fr 1fr; gap:1mm; }
+  .phase div { border:.3mm dashed var(--teal); background:#f5fcfd; border-radius:1.6mm; padding:.8mm 1.2mm; font-size:7.5pt; }
+  .phase div b { display:block; color:#137385; font-size:7.8pt; }
+  .road div.now { background:linear-gradient(135deg,var(--blue),var(--teal)); color:#fff; } .road div.now b { color:#fff; }
+  footer { display:flex; justify-content:space-between; font-size:7pt; color:var(--gray); }
+</style>
+</head>
+<body>
+<header>
+  <h1><small>恵那市地域医療ビジョン「恵那モデル」の具体化</small>恵那市 医療MaaS・専門医療連携 実証事業（仮称）</h1>
+  <div class="meta"><b>庁内・関係者説明用（案）Ver.2</b><br>令和8年11月　恵那市 医療福祉部 地域医療課<br>申請予定：地域未来交付金（令和9年度当初分）</div>
+</header>
+
+<div class="vision">目指す姿：住んでいる場所にかかわらず、かかりつけの総合診療と、必要なときの専門医療が受けられる恵那市<span>― 2035〜2040年を見据えて ―</span></div>
+
+<main>
+  <!-- 左列 -->
+  <div class="col">
+    <section>
+      <h2>背景・課題</h2>
+      <ul>
+        <li><b>医療機関の無い地域</b>（串原・山岡・飯地・笠置など）で人口減少・高齢化が進行</li>
+        <li>免許返納・公共交通の縮小で<b>通院そのものが困難</b>な高齢者が増加</li>
+        <li>地域では常勤の<b>専門医がいない診療科</b>があり、遠方の病院への通院・転院が負担</li>
+        <li>処方薬の受け取りにも通院と同じ移動負担</li>
+              </ul>
+    </section>
+    <section>
+      <h2>市の計画との関係</h2>
+      <ul>
+        <li>恵那市地域医療ビジョン（令和6年3月）</li>
+        <li>恵那モデル実施計画（案）（令和7年5月）<br>→ <b>移動診療車（D to P with N）の導入検討</b>、オンライン診療の導入を位置づけ済み</li>
+        <li>岐阜県 東濃圏域推進区域対応方針（令和7年2月）</li>
+      </ul>
+      
+    </section>
+    <section class="grow">
+      <h2 class="g">推進体制</h2>
+      <table>
+        <tr><th>恵那市</th><td>申請・統括、住民周知</td></tr>
+        <tr><th>恵那病院（協会）</th><td>総合診療医・看護師、車両運用</td></tr>
+        <tr><th>藤田医科大学</th><td>専門医の遠隔支援、学術評価</td></tr>
+        <tr><th>検討プロジェクト</th><td>恵那病院×藤田の<b>現場同士</b>で運用・相談の流れを合意</td></tr>
+        <tr><th>医師会・薬局</th><td>診療連携、服薬指導・配送</td></tr>
+        <tr><th>地域・介護・交通</th><td>対象者把握、運行・配送</td></tr>
+      </table>
+      <p class="note" style="margin-top:1mm">「（仮称）恵那市医療MaaS推進協議会」の下に、協会と大学の現場同士の意思疎通を図る「検討プロジェクト」を令和8年度中に設置</p>
+    </section>
+  </div>
+
+  <!-- 中央列：仕組み -->
+  <section class="diagram">
+    <h2 class="n">事業の仕組み：恵那病院（フロント）と藤田医科大学（バック）をオンラインで結ぶ</h2>
+    <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" font-family="Yu Gothic, Hiragino Sans, Meiryo, IPAPGothic, sans-serif">
+      <defs>
+        <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#3b8fe0"/></marker>
+        <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#2fa36b"/></marker>
+        <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#f0883e"/></marker>
+      </defs>
+      <!-- 地域ゾーン -->
+      <rect x="4" y="6" width="168" height="288" rx="8" fill="#f2f8fe" stroke="#d3e5f6"/>
+      <text x="88" y="22" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e5a96">重点地区（医療機関の無い地域）</text>
+      <!-- 北ルート -->
+      <rect x="14" y="32" width="148" height="62" rx="6" fill="#fff" stroke="#3b8fe0"/>
+      <text x="22" y="47" font-size="9.5" font-weight="bold" fill="#3b8fe0">北ルート</text>
+      <text x="22" y="62" font-size="11" fill="#2a3340">飯地・笠置</text>
+      <text x="22" y="80" font-size="8.5" fill="#66717e">公民館等を拠点に巡回／自宅前</text>
+      <!-- 南ルート -->
+      <rect x="14" y="104" width="148" height="62" rx="6" fill="#fff" stroke="#3b8fe0"/>
+      <text x="22" y="119" font-size="9.5" font-weight="bold" fill="#3b8fe0">南ルート</text>
+      <text x="22" y="134" font-size="11" fill="#2a3340">山岡・串原</text>
+      <text x="22" y="152" font-size="8.5" fill="#66717e">1台で曜日ごとに交互に運行</text>
+      <!-- 車両 -->
+      <rect x="22" y="182" width="132" height="58" rx="8" fill="#3b8fe0"/>
+      <text x="88" y="200" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">① 移動診療車（1台）</text>
+      <text x="88" y="215" text-anchor="middle" font-size="9" fill="#fff">看護師が同乗・バイタル測定</text>
+      <text x="88" y="229" text-anchor="middle" font-size="9" fill="#fff">D to P with N</text>
+      <circle cx="48" cy="244" r="6" fill="#1e5a96"/><circle cx="128" cy="244" r="6" fill="#1e5a96"/>
+      <line x1="88" y1="166" x2="88" y2="180" stroke="#3b8fe0" stroke-width="2" marker-end="url(#a)"/>
+      <line x1="88" y1="94" x2="88" y2="104" stroke="#3b8fe0" stroke-width="1.2" stroke-dasharray="3 2"/>
+      <!-- 住民宅への配送 -->
+      <rect x="22" y="256" width="132" height="30" rx="6" fill="#fff3e8" stroke="#f0883e"/>
+      <text x="88" y="275" text-anchor="middle" font-size="9.5" fill="#2a3340">住民の自宅（薬を受け取る）</text>
+
+      <!-- 恵那病院 -->
+      <rect x="208" y="60" width="140" height="118" rx="8" fill="#eaf4fe" stroke="#3b8fe0" stroke-width="1.5"/>
+      <text x="278" y="80" text-anchor="middle" font-size="9" fill="#3b8fe0" font-weight="bold">フロントエンド</text>
+      <text x="278" y="99" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e5a96">市立恵那病院</text>
+      <text x="278" y="115" text-anchor="middle" font-size="9" fill="#2a3340">指定管理：地域医療振興協会</text>
+      <text x="278" y="138" text-anchor="middle" font-size="10" fill="#2a3340">総合診療医が</text>
+      <text x="278" y="152" text-anchor="middle" font-size="10" fill="#2a3340">オンラインで診療</text>
+      <text x="278" y="170" text-anchor="middle" font-size="8.5" fill="#66717e">電子カルテで記録・処方</text>
+
+      <!-- 藤田 -->
+      <rect x="380" y="60" width="134" height="118" rx="8" fill="#e6f7ee" stroke="#2fa36b" stroke-width="1.5"/>
+      <text x="447" y="80" text-anchor="middle" font-size="9" fill="#2fa36b" font-weight="bold">バックエンド</text>
+      <text x="447" y="99" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e5a96">藤田医科大学</text>
+      <text x="447" y="115" text-anchor="middle" font-size="9" fill="#2a3340">（愛知県）</text>
+      <text x="447" y="138" text-anchor="middle" font-size="10" fill="#2a3340">専門医が</text>
+      <text x="447" y="152" text-anchor="middle" font-size="10" fill="#2a3340">遠隔で支援・同席</text>
+      <text x="447" y="170" text-anchor="middle" font-size="8.5" fill="#66717e">症例相談・画像共有</text>
+
+      <!-- 車↔恵那病院 -->
+      <path d="M156,205 C190,205 190,150 206,140" fill="none" stroke="#3b8fe0" stroke-width="2.4" marker-end="url(#a)" marker-start="url(#a)"/>
+      <text x="178" y="186" font-size="9" fill="#3b8fe0" font-weight="bold" transform="rotate(-62 178 186)">高速通信</text>
+      <!-- 恵那↔藤田 -->
+      <line x1="350" y1="119" x2="378" y2="119" stroke="#2fa36b" stroke-width="2.4" marker-end="url(#ag)" marker-start="url(#ag)"/>
+      <rect x="296" y="4" width="172" height="46" rx="6" fill="#2fa36b"/>
+      <text x="382" y="18" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">② 医師間の遠隔支援（D to D）</text>
+      <text x="382" y="30" text-anchor="middle" font-size="8.5" fill="#fff">必要時は三者同時（D to P with D）</text>
+      <rect x="304" y="35" width="156" height="12" rx="2" fill="#fff"/>
+      <text x="382" y="44.5" text-anchor="middle" font-size="8.3" font-weight="bold" fill="#2fa36b">検討プロジェクトで現場同士が連携</text>
+      <line x1="364" y1="50" x2="364" y2="112" stroke="#2fa36b" stroke-width="1" stroke-dasharray="3 2"/>
+
+      <!-- 薬局 -->
+      <rect x="208" y="212" width="140" height="74" rx="8" fill="#fff3e8" stroke="#f0883e" stroke-width="1.5"/>
+      <text x="278" y="231" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#f0883e">③ 市内の薬局</text>
+      <text x="278" y="248" text-anchor="middle" font-size="9" fill="#2a3340">オンライン服薬指導</text>
+      <text x="278" y="263" text-anchor="middle" font-size="9" fill="#2a3340">薬局の配送（基本）</text>
+      <text x="278" y="277" text-anchor="middle" font-size="9" fill="#2a3340">＋貨客混載を試行</text>
+      <line x1="278" y1="180" x2="278" y2="210" stroke="#f0883e" stroke-width="2" marker-end="url(#ao)"/>
+      <text x="284" y="198" font-size="8.5" fill="#f0883e">処方</text>
+      <line x1="206" y1="271" x2="156" y2="271" stroke="#f0883e" stroke-width="2" marker-end="url(#ao)"/>
+      <text x="181" y="265" text-anchor="middle" font-size="8.5" fill="#f0883e">配送</text>
+
+      <!-- Step2 -->
+      <rect x="380" y="200" width="134" height="86" rx="8" fill="#fff" stroke="#66717e" stroke-dasharray="4 3"/>
+      <text x="447" y="218" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#66717e">Step2以降に接続</text>
+      <text x="447" y="236" text-anchor="middle" font-size="9" fill="#2a3340">国保上矢作病院</text>
+      <text x="447" y="250" text-anchor="middle" font-size="9" fill="#2a3340">公立診療所</text>
+      <text x="447" y="268" text-anchor="middle" font-size="8.5" fill="#66717e">恵那病院全体の</text>
+      <text x="447" y="280" text-anchor="middle" font-size="8.5" fill="#66717e">専門医療連携へ拡大</text>
+      <line x1="350" y1="160" x2="380" y2="215" stroke="#66717e" stroke-width="1" stroke-dasharray="3 2"/>
+    </svg>
+    <div class="themes">
+      <div class="theme t1"><b>① 医療MaaS</b>看護師が同乗した車両が地区を巡回。高速通信と電子カルテで、車内でも病院と同じ診療を目指す</div>
+      <div class="theme t2"><b>② 医師間の遠隔支援</b>恵那病院の医師が藤田医科大学の専門医に相談。初年度は1〜2診療科から</div>
+      <div class="theme t3"><b>③ 服薬指導＋薬の配送</b>薬局がオンラインで服薬指導し、薬を自宅へ届ける</div>
+    </div>
+    <div class="effects">
+      <div><span class="tag">住民</span>通院しなくても、地元でかかりつけ医と専門医に診てもらえる</div>
+      <div><span class="tag">医療</span>限られた医師・看護師で広い地域をカバーできる</div>
+      <div><span class="tag">地域</span>全国の中山間地域に展開できる「恵那モデル」になる</div>
+    </div>
+  </section>
+
+  <!-- 右列 -->
+  <div class="col">
+    <section>
+      <h2>段階的な展開と将来展望</h2>
+      <div class="road">
+        <div class="now"><b>R8</b>検討PJ立上げ・協定・申請</div>
+        <div><b>R9</b>医療MaaS実証開始（①②③）</div>
+        <div><b>R10</b>専門連携の拡大、上矢作病院等を接続</div>
+        <div><b>R11〜</b>診療報酬・市予算で自走、横展開</div>
+      </div>
+      <p class="note" style="margin:1mm 0 .6mm">↑ 令和11年度までを <b>Phase1</b>（本事業）とし、その先を将来展望とする（要検討）</p>
+      <div class="phase">
+        <div><b>Phase2「遠隔専門医療・PHR」</b>専門外来の拡大、ヘルスコード連携</div>
+        <div><b>Phase3「高度医療DX」</b>遠隔手術支援、次世代高度医療の展開</div>
+      </div>
+    </section>
+    <section>
+      <h2 class="o">事業費（概算・3か年）</h2>
+      <table>
+        <tr><th style="white-space:nowrap">年度</th><th style="white-space:nowrap">事業費</th><th>主な内容</th></tr>
+        <tr><td>R9</td><td class="num">8,000万円</td><td>車両・機器、通信、電子カルテ連携、人件費</td></tr>
+        <tr><td>R10</td><td class="num">5,000万円</td><td>人件費、連携拡大</td></tr>
+        <tr><td>R11</td><td class="num">4,500万円</td><td>人件費、評価・横展開</td></tr>
+        <tr class="total"><td>計</td><td class="num">1億7,500万円</td><td>幅：1.5億〜2億円</td></tr>
+      </table>
+      <p class="note" style="margin-top:.8mm">うち人件費 約6,700万円。補助率1/2の場合、市負担は約8,750万円（R9 約4,000万円）。見積前の概算。</p>
+    </section>
+    <section class="grow">
+      <h2 class="g">成果指標（KPI）案</h2>
+      <ul>
+        <li>移動診療車の訪問件数・利用者満足度</li>
+        <li>利用者の通院時間・費用の削減</li>
+        <li>専門医との遠隔相談件数、遠方への受診・転院の回避件数</li>
+        <li>処方から薬を受け取るまでの日数</li>
+        <li>医師の移動時間の削減</li>
+        <li>実証後の継続運行・横展開</li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <span>※ 本資料は検討段階の案です。関係機関との協議・交付金要件の確認により変更する場合があります。</span>
+  <span>恵那市 医療福祉部 地域医療課</span>
+</footer>
+</body>
+</html>
