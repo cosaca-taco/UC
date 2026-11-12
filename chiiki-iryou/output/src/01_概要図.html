@@ -52,6 +52,9 @@
   .road { display:grid; grid-template-columns:repeat(4,1fr); gap:1mm; }
   .road div { background:var(--sky); border-radius:1mm; padding:1mm 1.2mm; font-size:7.6pt; position:relative; }
   .road div b { display:block; color:var(--navy); font-size:8pt; }
+  .phase { display:grid; grid-template-columns:1fr 1fr; gap:1mm; }
+  .phase div { border:.3mm dashed var(--blue); border-radius:1mm; padding:.8mm 1.2mm; font-size:7.5pt; }
+  .phase div b { display:block; color:var(--navy); font-size:7.8pt; }
   .road div.now { background:var(--navy); color:#fff; } .road div.now b { color:#fff; }
   footer { display:flex; justify-content:space-between; font-size:7pt; color:var(--gray); }
 </style>
@@ -198,12 +201,17 @@
   <!-- 右列 -->
   <div class="col">
     <section>
-      <h2>段階的な展開</h2>
+      <h2>段階的な展開と将来展望</h2>
       <div class="road">
         <div class="now"><b>R8</b>検討PJ立上げ・協定・申請</div>
         <div><b>R9</b>医療MaaS実証開始（①②③）</div>
         <div><b>R10</b>専門連携の拡大、上矢作病院等を接続</div>
         <div><b>R11〜</b>診療報酬・市予算で自走、横展開</div>
+      </div>
+      <p class="note" style="margin:1mm 0 .6mm">↑ 令和11年度までを <b>Phase1</b>（本事業）とし、その先を将来展望とする（要検討）</p>
+      <div class="phase">
+        <div><b>Phase2「遠隔専門医療・PHR」</b>専門外来の拡大、ヘルスコード連携</div>
+        <div><b>Phase3「高度医療DX」</b>遠隔手術支援、次世代高度医療の展開</div>
       </div>
     </section>
     <section>
